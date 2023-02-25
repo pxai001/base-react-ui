@@ -1,0 +1,58 @@
+:root:root {
+    --adm-color-primary: var(--primary-color);
+}
+
+:root {
+    --primary-color: #BDDD22;
+    --main-text-family: SysFont;
+    --main-bg-color-0: #f2f2f2;
+    --main-bg-color-1: white;
+    --main-text-color-0: #000001;
+    --main-text-color-1: #e7e7e7;
+    --box-shadow: -2px -2px 5px var(--main-bg-color-1), 3px 3px 5px rgb(0 0 0 / 15%);
+    --box-shadow-active: inset -2px -2px 5px var(--main-bg-color-1), inset 3px 3px 5px rgb(0 0 0 / 15%);
+}
+
+:root[theme='dark'] {
+    --primary-color: #BDDD22;
+    --main-text-family: SysFont;
+    --main-bg-color-0: #45494f;
+    --main-bg-color-1: #666768;
+    --main-text-color-0: white;
+    --main-text-color-1: #3c3c3c;
+    --box-shadow: -2px -2px 5px var(--main-bg-color-1), 3px 3px 5px rgb(0 0 0 / 38%);
+    --box-shadow-active: inset -2px -2px 5px var(--main-bg-color-1), inset 3px 3px 5px rgb(0 0 0 / 38%);
+}
+
+@font-face {
+    font-family: MiSansFont;
+    src: url("font/MiSans-Normal.ttf");
+}
+
+@font-face {
+    font-family: PingFang;
+    src: url("font/PingFangSimple.ttf");
+}
+
+@font-face {
+    font-family: SourceHanSansCN;
+    src: url("font/SourceHanSansCN-Regular.otf");
+}
+
+@font-face {
+    font-family: OPPOSans-R;
+    src: url("font/OPPOSans-R.ttf");
+}
+
+@font-face {
+    font-family: SysFont;
+    src: url("font/PingFangSimple.ttf");
+}
+
+body {
+    margin: 0px;
+    font-size: 16px;
+    background-color: var(--main-bg-color-0) !important;
+    color: var(--main-text-color-0) !important;
+    overflow: hidden;
+}

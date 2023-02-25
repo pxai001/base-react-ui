@@ -1,0 +1,91 @@
+/*layout*/
+.header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 10vh;
+    line-height: 10vh;
+    width: 100vw;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+}
+
+.header-nav-left {
+    width: calc(33.3% - 5px);
+    text-align: left;
+    padding-left: 5px;
+    cursor: pointer;
+    font-size: large;
+}
+
+.header-nav-mid {
+    width: 33.3%;
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.header-nav-right {
+    width: calc(33.3% - 5px);
+    text-align: right;
+    padding-right: 5px;
+    font-size: large;
+    cursor: pointer;
+}
+
+.main {
+    position: absolute;
+    top: 10vh;
+    bottom: 10vh;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    overflow: auto;
+}
+
+.top-main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    overflow: auto;
+}
+
+.bottom-main {
+    position: absolute;
+    top: 0;
+    bottom: 10vh;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    overflow: auto;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    height: 10vh;
+    line-height: 10vh;
+    border-top: 1px solid var(--main-bg-color-1);
+}
+
+/*button*/
+.sys-btn {
+    height: 50px;
+    width: calc(100% - 20px);
+    line-height: 50px;
+    margin: 10px;
+    border-radius: 4px;
+    background: var(--main-bg-color-0);
+    color: var(--primary-color);
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+}
