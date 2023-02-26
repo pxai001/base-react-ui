@@ -3,7 +3,7 @@
 }
 
 :root {
-    --primary-color: #BDDD22;
+    --primary-color: #4B5CC4;
     --main-text-family: SysFont;
     --main-bg-color-0: #f2f2f2;
     --main-bg-color-1: white;
@@ -16,7 +16,7 @@
 }
 
 :root[theme='dark'] {
-    --primary-color: #BDDD22;
+    --primary-color: #4B5CC4;
     --main-text-family: SysFont;
     --main-bg-color-0: #45494f;
     --main-bg-color-1: #666768;
