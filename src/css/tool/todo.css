@@ -1,7 +1,7 @@
 .todo-card {
-    height: calc(90vh - 80px);
-    width: calc(100vw - 40px);
-    margin: 20px;
+    height: calc(88vh - 30px);
+    width: calc(100vw - 30px);
+    margin: 15px;
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     float: left;
@@ -11,23 +11,23 @@
     height: 10vh;
     line-height: 10vh;
     font-size: x-large;
-    width: calc(100vw - 40px);
+    width: calc(100vw - 30px);
     text-align: center;
     font-weight: bold;
 }
 
 
 .todo-card-main-border {
-    height: calc(80vh - 80px);
-    width: calc(100vw - 40px);
+    height: calc(78vh - 30px);
+    width: calc(100vw - 30px);
     box-shadow: var(--box-shadow-active);
     float: left;
 }
 
 .todo-card-main {
     margin: 5px;
-    height: calc(80vh - 80px - 10px);
-    width: calc(100vw - 40px - 10px);
+    height: calc(78vh - 30px - 10px);
+    width: calc(100vw - 30px - 10px);
     box-shadow: var(--box-shadow-active);
     float: left;
     overflow: auto;
@@ -36,7 +36,7 @@
 .todo-item {
     margin: 10px;
     height: 10vh;
-    width: calc(100vw - 40px - 10px - 20px);
+    width: calc(100vw - 30px - 10px - 20px);
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     display: flex;
@@ -47,7 +47,7 @@
     height: 10vh;
     line-height: 10vh;
     text-align: center;
-    width: calc(100% - 10vh - 1px);
+    width: calc(100% - 10vh);
     cursor: pointer;
 }
 
@@ -60,9 +60,10 @@
     color: red;
     font-weight: bold;
     cursor: pointer;
+    font-size: x-large;
 }
 
 .todo-status.active {
-   box-shadow: var(--box-shadow-active);
-   color: var(--primary-color);
+    box-shadow: var(--box-shadow-active);
+    color: lightgreen;
 }

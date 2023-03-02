@@ -3,28 +3,33 @@ import TodoCard from "../tool/todoCard/TodoCard";
 import SysFooter from "../../component/SysFooter";
 import SysMain from "../../component/SysMain";
 import React, {useState} from "react";
-import {AllApplication, Close} from '@icon-park/react';
-function Home(props) {
+import {ApplicationMenu, Close} from '@icon-park/react';
+import SysHeader from "../../component/SysHeader";
+
+function Home() {
     const [showMenu, setShowMenu] = useState(false);
     const navigate = useNavigate();
+    const headerOption = {
+        left: "Nature Tool",
+        mid: "",
+        right: <ApplicationMenu/>,
+        rightClick: () => setShowMenu(true)
+    };
+
     return (
         <div>
-            <SysMain className="bottom-main">
+            <SysHeader option={headerOption}/>
+            <SysMain className="top-main">
                 <Routes>
                     <Route path="/" element={<TodoCard/>}/>
                     <Route path="/todo" element={<TodoCard/>}/>
                 </Routes>
             </SysMain>
-            <SysFooter>
-                <div onClick={() => showMenuList()} className="footer-btn">
-                    <AllApplication/>
-                </div>
-            </SysFooter>
             <div className="sys-mask" style={{display: showMenu ? "block" : "none"}}>
                 <div className="bottom-main">
                 </div>
                 <SysMain className="bottom-main">
-                    <div className="sys-menu-btn" onClick={() => goPage("/todo")}>TODO</div>
+                    <div className="sys-menu-btn" onClick={(e) => goPage("/todo", e)}>TODO</div>
                 </SysMain>
                 <SysFooter>
                     <div onClick={() => setShowMenu(false)} className="footer-btn">
@@ -35,13 +40,10 @@ function Home(props) {
         </div>
     );
 
-    function showMenuList() {
-        setShowMenu(true);
-    }
-
-    function goPage(page) {
+    function goPage(page, e) {
         navigate(page);
         setShowMenu(false);
+        e.stopPropagation();
     }
 }
 

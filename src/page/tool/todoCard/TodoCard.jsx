@@ -2,6 +2,7 @@ import "../../../css/tool/todo.css"
 import {useState} from "react";
 import {getData, setData} from "../../../js/dataUtils";
 import {isNotUndefined, isUndefined} from "../../../js/StringUtils";
+import {Check, Round} from "@icon-park/react";
 
 function TodoCard() {
     const dataType = "todoCard";
@@ -33,7 +34,9 @@ function TodoCard() {
                                 return (
                                     <div key={index + item.info} className="todo-item">
                                         <div className={item.status === "OK" ? "todo-status active" : "todo-status"}
-                                             onClick={() => changeTodoStatus(index, item.status)}>{item.status}</div>
+                                             onClick={() => changeTodoStatus(index, item.status)}>
+                                            {item.status === "NO" ? <Round/> : <Check/>}
+                                        </div>
                                         <div className="todo-info" onClick={() => changeTodoInfo(index, item.info)}>
                                             {item.info}
                                         </div>
